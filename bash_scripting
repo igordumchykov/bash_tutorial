@@ -1,0 +1,32 @@
+commands:
+  tee <file> - put input to file
+  cat <file> - reads file
+  printf - print to variable:
+    printf "%s" hello - prints hello
+    printf "hello" > hello.txt - prints to file
+    printf "abc" /dev/null - prints to error msg to special file
+  read
+    read var < <filename> - reads file to variable var
+  tr:
+    tr e i < hello.txt > hello1.txt - copies and substitutes e to i from file1 to file2
+  >> - append to file
+  substitution:
+    date=$(date) - function result saved to date variable
+    
+  brackets:
+  [] test expression
+  [[]] additional functionality for testing
+  {} used with variable
+  (()) arithmetic expression
+  
+  
+   Builtin variables:
+   There are some useful builtin variables, like
+  echo "Last program's return value: $?"
+  echo "Script's PID: $$"
+  echo "Number of arguments passed to script: $"
+  echo "All arguments passed to script: $@"
+  echo "Script's arguments separated into different variables: $1 $2..."
+
+  The `-p` flag causes new intermediate directories to be created as necessary.
+  mkdir -p myNewDir/with/intermediate/directories
